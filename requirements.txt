@@ -1,0 +1,6 @@
+torch
+unsloth
+trl
+transformers
+datasets
+psutil

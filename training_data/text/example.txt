@@ -1,0 +1,7 @@
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+Hello!<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Hey there! How are you?<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+I'm great thanks!<|eot_id|>
