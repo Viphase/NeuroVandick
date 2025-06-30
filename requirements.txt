@@ -4,3 +4,5 @@ trl
 transformers
 datasets
 psutil
+beautifulsoup4
+lxml
