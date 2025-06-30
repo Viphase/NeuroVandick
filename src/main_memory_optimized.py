@@ -9,7 +9,8 @@ import gc
 import psutil
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
-from transformers import TrainingArguments, DataCollatorForSeq2Seq
+from transformers.training_args import TrainingArguments
+from transformers.data.data_collator import DataCollatorForSeq2Seq
 from unsloth import is_bfloat16_supported
 from unsloth.chat_templates import train_on_responses_only, get_chat_template, standardize_sharegpt
 from datasets import load_dataset
