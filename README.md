@@ -16,13 +16,13 @@ A fine-tuned AI-agent for talking and chatting in real time. Based on Ivan Kuzia
 
 * **Step 1:**
     Gather up your training data in specific folder *training_data/text*. 
-* **Step 2**
+* **Step 2:**
     Adjust the file names in *prepare_data.py*. 
-* **Step 3**
+* **Step 3:**
     Run the *warm_up.py* script.
-* **Step 4**
+* **Step 4:**
     Run the *yeah_it's_leg_day.py* script.
-* **Step 5**
+* **Step 5:**
     Run the *workout.py* script.
-* **Step 6**
+* **Step 6:**
     Run the *leave_gym.py* script - **!not completed yet!**
