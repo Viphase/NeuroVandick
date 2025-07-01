@@ -118,6 +118,9 @@ if __name__ == '__main__':
     print("Starting training...")
     try:
         trainer_stats = trainer.train()
+        # After training
+        model.save_pretrained("outputs")
+        tokenizer.save_pretrained("outputs")
         print("Training completed successfully!")
         print(f"Training stats: {trainer_stats}")
     except Exception as e:
