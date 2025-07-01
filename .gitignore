@@ -5,5 +5,4 @@ processed_chat_data.txt
 unsloth_compiled_cache/
 _unsloth_sentencepiece_temp/
 llama.cpp/
-vandick_1b_v0.1/
 outputs/
