@@ -4,5 +4,5 @@ viphase-tg-chat-history.txt
 processed_chat_data.txt
 unsloth_compiled_cache
 _unsloth_sentencepiece_temp
-outputs
-llama.cpp
+outputs/
+llama.cpp/
