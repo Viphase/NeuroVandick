@@ -2,8 +2,8 @@ group-tg-chat-history.txt
 v1uz-tg-chat-history.txt
 viphase-tg-chat-history.txt
 processed_chat_data.txt
-unsloth_compiled_cache
-_unsloth_sentencepiece_temp
+unsloth_compiled_cache/
+_unsloth_sentencepiece_temp/
 outputs/
 llama.cpp/
 models/vandick_1b_v0.1/
