@@ -3,10 +3,10 @@ from unsloth import FastLanguageModel
 
 def main():
     # Path to your trained model directory
-    trained_model_dir = os.path.join("outputs")  # or provide absolute path if needed
+    trained_model_dir = os.path.join("./outputs")  # or provide absolute path if needed
 
     # The GGUF file will be saved here
-    gguf_output_path = "models/vandick_1b_v0.1.gguf"
+    gguf_output_path = "./models/your_model"
 
     # Use the same max_seq_length as in training
     max_seq_length = 512

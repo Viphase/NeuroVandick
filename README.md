@@ -15,7 +15,7 @@ A fine-tuned AI-agent for talking and chatting in real time. Based on Ivan Kuzia
 ## ❗ How to use
 *You must be on WINDOWS!*
 * **Step 1:**
-    Install Python 3.11.9 (*https://www.python.org/downloads/release/python-3119/*). Install CMake (*https://cmake.org/download/*). Install dependences run (*pip install -r /path/to/requirements.txt*).
+    Install Python 3.11.9 (*https://www.python.org/downloads/release/python-3119/*). Install CMake (*https://cmake.org/download/*). Install dependences run (*pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu118*).
 * **Step 2**
     Run *leave_gym*
 * **Step 3**
@@ -23,7 +23,7 @@ A fine-tuned AI-agent for talking and chatting in real time. Based on Ivan Kuzia
 
 ## ❓ How to make your own model
 * **Step 1:**
-    Install Python 3.11.9 (*https://www.python.org/downloads/release/python-3119/*). Install CMake (*https://cmake.org/download/*). Install dependences run (*pip install -r /path/to/requirements.txt*).
+    Install Python 3.11.9 (*https://www.python.org/downloads/release/python-3119/*). Install CMake (*https://cmake.org/download/*). Install dependences run (*pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu118*).
 * **Step 2:**
     Gather up your training data in specific folder *training_data/text*. 
 * **Step 3:**
@@ -36,3 +36,5 @@ A fine-tuned AI-agent for talking and chatting in real time. Based on Ivan Kuzia
     Run the *workout.py* script.
 * **Step 7:**
     Run the *leave_gym.py*
+* **Step 8:**
+    Run Ollama...

@@ -41,13 +41,12 @@ print("=== Memory-Optimized Training Started ===")
 monitor_memory()
 
 if __name__ == '__main__':
-    # Reduced parameters for memory efficiency
-    max_seq_length = 512  # Even smaller for memory
+    max_seq_length = 1024 
     load_in_4bit = True
 
     print("Loading model...")
     model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name = "unsloth/Llama-3.2-1B-Instruct-bnb-4bit",
+        model_name = "unsloth/Llama-3.2-1B-bnb-4bit",
         max_seq_length = max_seq_length,
         load_in_4bit = load_in_4bit,
     )
@@ -69,7 +68,7 @@ if __name__ == '__main__':
     monitor_memory()
 
     print("Setting up tokenizer...")
-    tokenizer = get_chat_template(tokenizer, chat_template = "llama-3.1")
+    tokenizer = get_chat_template(tokenizer, chat_template = "llama-3.2")
 
     # Load the preprocessed dataset
     print("Loading preprocessed chat data...\n")
@@ -92,10 +91,10 @@ if __name__ == '__main__':
             train_dataset = dataset,
             dataset_text_field = "text", # Point to the 'text' column created by load_dataset("text", ...)
             args = TrainingArguments(
-                per_device_train_batch_size = 1,
-                gradient_accumulation_steps = 16,  # Large accumulation to maintain effective batch size
-                warmup_steps = 2,
-                max_steps = 10,  # Very short training for testing
+                per_device_train_batch_size = 4,
+                gradient_accumulation_steps = 8,  # Large accumulation to maintain effective batch size
+                warmup_steps = 5,
+                max_steps = 200,
                 learning_rate = 2e-4,
                 fp16 = not is_bfloat16_supported(),
                 bf16 = is_bfloat16_supported(),
@@ -104,7 +103,7 @@ if __name__ == '__main__':
                 weight_decay = 0.01,
                 lr_scheduler_type = "linear",
                 seed = 3407,
-                output_dir = "outputs",
+                output_dir = "outputs/",
                 report_to = "none",
                 dataloader_pin_memory = False,
                 remove_unused_columns = False,
@@ -119,8 +118,8 @@ if __name__ == '__main__':
     try:
         trainer_stats = trainer.train()
         # After training
-        model.save_pretrained("outputs")
-        tokenizer.save_pretrained("outputs")
+        model.save_pretrained("outputs/")
+        tokenizer.save_pretrained("outputs/")
         print("Training completed successfully!")
         print(f"Training stats: {trainer_stats}")
     except Exception as e:
