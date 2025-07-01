@@ -6,3 +6,4 @@ unsloth_compiled_cache
 _unsloth_sentencepiece_temp
 outputs/
 llama.cpp/
+models/vandick_1b_v0.1/
