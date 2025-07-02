@@ -1,8 +1,10 @@
 group-tg-chat-history.txt
 v1uz-tg-chat-history.txt
 viphase-tg-chat-history.txt
+group-tg-call-history.txt
 processed_chat_data.txt
 unsloth_compiled_cache/
 _unsloth_sentencepiece_temp/
 llama.cpp/
 outputs/
+models/

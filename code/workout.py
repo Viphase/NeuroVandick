@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     print("Loading model...")
     model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name = "unsloth/Llama-3.2-1B-bnb-4bit",
+        model_name = "unsloth/Llama-3.2-3B-Instruct-bnb-4bit",
         max_seq_length = max_seq_length,
         load_in_4bit = load_in_4bit,
     )
@@ -94,8 +94,8 @@ if __name__ == '__main__':
                 per_device_train_batch_size = 4,
                 gradient_accumulation_steps = 8,  # Large accumulation to maintain effective batch size
                 warmup_steps = 5,
-                max_steps = 200,
-                learning_rate = 2e-4,
+                max_steps = 400,
+                learning_rate = 1e-4,
                 fp16 = not is_bfloat16_supported(),
                 bf16 = is_bfloat16_supported(),
                 logging_steps = 1,

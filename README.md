@@ -12,6 +12,11 @@ A fine-tuned AI-agent for talking and chatting in real time. Based on Ivan Kuzia
 6. Test ❌
 7. Future: make a platform for communicating with it 🚀
 
+- соединить две модели ламу и наш натрененный тенсор
+- натренить на новых данных
+- оптимизировать процесс
+- переделать формат данных
+
 ## ❗ How to use
 *You must be on WINDOWS!*
 * **Step 1:**
